@@ -20,7 +20,7 @@ function myMap(collection, callback){
 // ----------------------------------------------------
 // replication of reduce... not using reduce?                   not done
 // ----------------------------------------------------
-function myReduce(collection, callback, value = 0){
+function myReduce(collection, callback, value = -2){
     if(typeof collection === 'object'){
         collection = Object.values(collection)
     } 
@@ -30,7 +30,7 @@ function myReduce(collection, callback, value = 0){
     for(let item in collection){
         value = callback(value, collection[item], collection)
     }
-    
+
     console.log('value', value)
     return value
 }
